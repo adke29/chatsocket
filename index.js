@@ -19,8 +19,19 @@ io.on('connection', (socket) => {
   });
   socket.on('chat message', (msg) => {
     socket.emit('chat message', msg);
+    // for (let i = 0; i < 10; i++) {
+    //   console.log('sending message: ' + i);
+    //   await new Promise((resolve) => setTimeout(()=>{
+        
+    //     resolve(i)
+    //   }, 100));
+    // }
   });
 });
+
+function delay(i){
+  
+}
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
